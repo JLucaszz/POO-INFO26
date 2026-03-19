@@ -1,15 +1,29 @@
-x = int(input())
+x = int(input('Digite um mês do ano entre 1 e 12: '))
 match x:
-    case 1: print("O mês de Janeiro é do primeiro trimestre do ano")
-    case 2: print("O mês de Fevereiro é do primeiro trimestre do ano")
-    case 3: print("O mês de Março é do primeiro trimestre do ano")
-    case 4: print("O mês de Abril é do segundo trimestre do ano")
-    case 5: print("O mês de Maio é do segundo trimestre do ano")
-    case 6: print("O mês de Junho é do segundo trimestre do ano")
-    case 7: print("O mês de Julho é do terceiro trimestre do ano")
-    case 8: print("O mês de Agosto é do terceiro trimestre do ano")
-    case 9: print("O mês de Setembro é do terceiro trimestre do ano")
-    case 10: print("O mês de Outubro é do quarto trimestre do ano")
-    case 11: print("O mês de Novembro é do quarto trimestre do ano")
-    case 12: print("O mês de Dezembro é do quarto trimestre do ano")
-    case _: print("Digite um número de 1 a 12")
+    case 1:
+        print('Janeiro, 1 Semestre')
+    case 2:
+        print('Fevereiro, 1 Semestre')
+    case 3:
+        print('Março, 1 Semestre')
+    case 4:
+        print('Abril, 2 Semestre')
+    case 5:
+        print('Maio, 2 Semestre')
+    case 6:
+        print('Junho, 2 Semestre')
+    case 7:
+        print('Julho, 3 Semestre')
+    case 8:
+        print('Agosto, 3 Semestre')
+    case 9:
+        print('Setembro, 3 Semestre')
+    case 10:
+        print('Outubro, 4 Semestre')
+    case 11:
+        print('Novembro, 4 Semestre')
+    case 12:
+        print('Dezembro, 4 Semestre')
+    case _:
+        print('Mês inválido')
+    

@@ -104,18 +104,25 @@ class Cinema:
             return 8
         return self.calc_inteira() / 2
 
-
-
 class UI:
+    @staticmethod
+    def main():
+        op = 0
+        while op != 9:
+            op = UI.main()
+            if op == 1: UI.circulo()
+            if op == 2: UI.viagem()
+            if op == 3: UI.banco()
+            if op == 4: UI.cinema()
+
+
+
     @staticmethod
     def main():
         x = Circulo()
         x.set_raio(float(input("Valor:")))
         print(x.calc_circun())
 
-UI.main()
-
-class UI:
     @staticmethod
     def main():
         x = Viagem()
@@ -123,9 +130,6 @@ class UI:
         x.set_t(float(input("Valor t=")))
         print(x.velocidade_m())
     
-UI.main()
-
-class UI:
     @staticmethod
     def main():
         a = Banco
@@ -141,8 +145,6 @@ class UI:
         a.sacar(30)
         print("Saldo após saque:", a.get_saldo())
 
-
-class UI:
     @staticmethod
     def main():
         x = Cinema()

@@ -26,6 +26,9 @@ class Contato:
     def __str__(self):
         return f"{self.__id} - {self.__nome} - {self.__email} - {self.__fone}"
 
+
+
+
 class ContatoUI:
         contatos = [] #atributo de classe - é uma lista de contatos
         @staticmethod
@@ -91,6 +94,5 @@ class ContatoUI:
                   encotrados = True
           if not encotrados:
               print("Nada")
-
     
 ContatoUI.main()

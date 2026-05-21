@@ -114,9 +114,14 @@ class PacienteUI:
               print("Nada")
 
     @classmethod
-    def aniversariante(cls):
-        print()
+    def aniversariantes(cls):
+        print(f"\nAniversariantes do mês {datetime.now().month}:")
+        for x in cls.__pacientes:
+            if x.get_nascimento().month == datetime.now().month:
+                print(f"Nome: {x.get_nome()} - Aniversário: {x.get_nascimento().day}/{x.get_nascimento().month}")
 
+
+PacienteUI.main()
 
     
 

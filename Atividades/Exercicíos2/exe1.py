@@ -113,6 +113,10 @@ class PacienteUI:
           if not encotrados:
               print("Nada")
 
+    @classmethod
+    def aniversariante(cls):
+        print()
+
 
     
 

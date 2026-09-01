@@ -63,3 +63,19 @@ class Service:
 
     @staticmethod
     def horario_listar_id(id):
+        return HorarioDAO().listar_id(id)
+
+    @staticmethod
+    def horario_atualizar(id, data, confirmado, id_clientes, id_servico):
+        c = Horario(id, data)
+        c.set_confirmado(confirmado)
+        c.set_id_clientes(id_clientes)
+        c.set_id_servico(id_servico)
+        HorarioDAO().atualizar(c)
+
+    @staticmethod
+    def horario_excluir(id):
+        HorarioDAO().excluir(id) 
+
+    
+

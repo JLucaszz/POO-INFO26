@@ -47,5 +47,11 @@ class Atendimento:
     def get_id_horario(self): return self.__id_horario
 
     def __str__(self):
-        f"id"
+       return f"{self.__id} - {self.__data} - {self.__queixa_principal} - {self.__historico_saude} - {self.__avaliacao} - {self.__prescricao} - {self.__id_horario}"
+
+    def to_json(self):
+        return {"di":self.__id, "data":self.__data, "queixa_principal":self.__queixa_principal, "histrorico_saude":self.__historico_saude, "avaliacao":self.__avaliacao, "prescricao":self.__prescricao, "id_horario":self.__id_horario}
+
+    def from_json(dic):
+        return Atendimento(dic["id"], dic["data"], dic["queixa_principal"], dic["historico_saude"], dic["avaliacao"], dic["prescricao"], dic["id_horario"])
     

@@ -23,8 +23,9 @@ class ManterClienteUI:
         nome = st.text_input("Informe o nome")
         email = st.text_input("Informe o e-mail")
         fone = st.text_input("Informe o fone")
+        id_convenio = st.text_input("Informe o Id de Convenio")
         if st.button("Inserir"):
-            Service.cliente_inserir(nome, email, fone)
+            Service.cliente_inserir(nome, email, fone, id_convenio)
             st.success("Cliente inserido com sucesso")
             time.sleep(2)
             st.rerun()
@@ -36,9 +37,10 @@ class ManterClienteUI:
             nome = st.text_input("Novo nome", op.get_nome())
             email = st.text_input("Novo e-mail", op.get_email())
             fone = st.text_input("Novo fone", op.get_fone())
+            id_convenio = st.text_input("Novo convenio", op.get_id_conevnio())
             if st.button("Atualizar"):
                 id = op.get_id()
-                Service.cliente_atualizar(id, nome, email, fone)
+                Service.cliente_atualizar(id, nome, email, fone, id_convenio)
                 st.success("Cliente atualizado com sucesso")
                 time.sleep(2)
                 st.rerun()
@@ -53,3 +55,5 @@ class ManterClienteUI:
                 st.success("Cliente excluído com sucesso")
                 time.sleep(2)
                 st.rerun()
+
+    

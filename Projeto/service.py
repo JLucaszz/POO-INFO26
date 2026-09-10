@@ -6,11 +6,13 @@ from models.horario import Horario
 from models.horariodao import HorarioDAO
 from models.profissional import Profissional
 from models.profissionaldao import ProfissionalDAO
+from models.convenio import Convenio
+from models.conveniodao import ConvenioDAO
 
 class Service:
     @staticmethod
-    def cliente_inserir(nome, email, fone):
-        obj = Clientes(0, nome, email, fone)
+    def cliente_inserir(nome, email, fone, id_convenio):
+        obj = Clientes(0, nome, email, fone, id_convenio)
         ClienteDAO().inserir(obj)
 
     @staticmethod
@@ -22,8 +24,8 @@ class Service:
         return ClienteDAO().listar_id(id)
     
     @staticmethod
-    def cliente_atualizar(id, nome, email, fone):
-        obj = Clientes(id, nome, email, fone)
+    def cliente_atualizar(id, nome, email, fone, id_convenio):
+        obj = Clientes(id, nome, email, fone, id_convenio)
         ClienteDAO().atualizar(obj)
 
     @staticmethod
@@ -98,6 +100,24 @@ class Service:
     @staticmethod
     def profissional_excluir(id):
         ProfissionalDAO().excluir(id)
+
+    @staticmethod
+    def convenio_inserir(nome, fone, contato):
+            obj = Convenio(0, nome, fone, contato)
+            ConvenioDAO().inserir(obj)
+    @staticmethod
+    def convenio_listar():
+            return ConvenioDAO().listar()
+    @staticmethod
+    def convenio_listar_id(id):
+            return ConvenioDAO().listar_id(id)
+    @staticmethod
+    def convenio_atualizar(id, nome, fone, contato):
+            obj = Convenio(id, nome, fone, contato)
+            ConvenioDAO().atualizar(obj)
+    @staticmethod
+    def convenio_excluir(id):
+            ConvenioDAO().excluir(id)
 
     
 
